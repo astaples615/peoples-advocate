@@ -16,7 +16,6 @@
     min-height: 100vh;
   }
 
-  /* ── HEADER ── */
   header {
     background: linear-gradient(135deg, #0a0a0a 0%, #1c1c1c 60%, #2d2d2d 100%);
     padding: 40px 32px 32px;
@@ -45,7 +44,6 @@
     color: #ffffff;
     line-height: 1.2;
     margin-bottom: 10px;
-    letter-spacing: -0.5px;
   }
 
   header h1 span { color: #c9a84c; }
@@ -58,14 +56,12 @@
     line-height: 1.6;
   }
 
-  /* ── MAIN WRAPPER ── */
   .wrapper {
     max-width: 760px;
     margin: 0 auto;
     padding: 40px 20px 60px;
   }
 
-  /* ── INTRO CARD ── */
   .intro-card {
     background: #ffffff;
     border-left: 5px solid #c9a84c;
@@ -75,15 +71,9 @@
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   }
 
-  .intro-card p {
-    font-size: 15px;
-    line-height: 1.75;
-    color: #333;
-  }
-
+  .intro-card p { font-size: 15px; line-height: 1.75; color: #333; }
   .intro-card strong { color: #0a0a0a; }
 
-  /* ── SECTION LABEL ── */
   .section-label {
     display: flex;
     align-items: center;
@@ -93,8 +83,7 @@
   }
 
   .section-label .icon {
-    width: 34px;
-    height: 34px;
+    width: 34px; height: 34px;
     background: #c9a84c;
     border-radius: 50%;
     display: flex;
@@ -106,14 +95,12 @@
 
   .section-label h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 13px; font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #0a0a0a;
   }
 
-  /* ── QUESTION CARD ── */
   .q-card {
     background: #ffffff;
     border-radius: 10px;
@@ -128,8 +115,7 @@
 
   .q-number {
     font-family: 'Montserrat', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
+    font-size: 11px; font-weight: 700;
     letter-spacing: 2px;
     color: #c9a84c;
     text-transform: uppercase;
@@ -138,26 +124,21 @@
 
   .q-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 16px; font-weight: 700;
     color: #0a0a0a;
     line-height: 1.4;
     margin-bottom: 10px;
   }
 
   .q-why {
-    font-size: 13px;
-    color: #777;
+    font-size: 13px; color: #777;
     font-style: italic;
     line-height: 1.5;
     padding-left: 12px;
     border-left: 3px solid #f0e0b0;
   }
 
-  /* answer area */
-  .q-answer {
-    margin-top: 14px;
-  }
+  .q-answer { margin-top: 14px; }
 
   .q-answer textarea,
   .q-answer input[type="text"] {
@@ -166,8 +147,7 @@
     border-radius: 6px;
     padding: 12px 14px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    color: #333;
+    font-size: 14px; color: #333;
     resize: vertical;
     transition: border-color 0.2s;
     background: #fafafa;
@@ -181,8 +161,6 @@
   }
 
   .q-answer textarea { min-height: 80px; }
-
-  /* radio / checkbox options */
   .options {
     display: flex;
     flex-wrap: wrap;
@@ -199,20 +177,12 @@
     color: #555;
     cursor: pointer;
     transition: all 0.2s;
-    background: #fafafa;
     user-select: none;
   }
 
-  .option-btn:hover,
-  .option-btn.selected {
-    border-color: #c9a84c;
-    background: #fffbf0;
-    color: #0a0a0a;
-  }
+  .option-btn:hover { border-color: #c9a84c; color: #c9a84c; }
+  .option-btn.selected { background: #c9a84c; border-color: #c9a84c; color: #0a0a0a; font-weight: 700; }
 
-  .option-btn.selected { background: #c9a84c; color: #0a0a0a; border-color: #c9a84c; }
-
-  /* scale */
   .scale-row {
     display: flex;
     gap: 8px;
@@ -221,97 +191,80 @@
   }
 
   .scale-btn {
-    width: 42px;
-    height: 42px;
+    width: 44px; height: 44px;
     border: 2px solid #ddd;
     border-radius: 8px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: #888;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #555;
+    cursor: pointer;
     transition: all 0.2s;
-    background: #fafafa;
-    user-select: none;
   }
 
-  .scale-btn:hover, .scale-btn.selected {
-    border-color: #c9a84c;
-    background: #c9a84c;
-    color: #0a0a0a;
-  }
+  .scale-btn:hover { border-color: #c9a84c; color: #c9a84c; }
+  .scale-btn.selected { background: #c9a84c; border-color: #c9a84c; color: #0a0a0a; }
 
   .scale-labels {
     display: flex;
     justify-content: space-between;
     font-size: 11px;
     color: #aaa;
-    margin-top: 4px;
+    margin-top: 6px;
     padding: 0 2px;
   }
 
-  /* ── CONTACT SECTION ── */
   .contact-section {
-    background: #ffffff;
+    background: #fff;
     border-radius: 10px;
     padding: 28px;
-    margin-top: 36px;
+    margin-bottom: 16px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    border-top: 3px solid #c9a84c;
   }
 
-  .contact-section h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #0a0a0a;
-    margin-bottom: 20px;
-  }
-
-  .field-row {
+  .field-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
+    gap: 14px;
+    margin-bottom: 14px;
   }
 
-  @media (max-width: 520px) { .field-row { grid-template-columns: 1fr; } }
-
-  .field-group { display: flex; flex-direction: column; gap: 6px; }
+  @media(max-width:600px){ .field-group { grid-template-columns: 1fr; } }
 
   .field-group label {
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
     color: #555;
     text-transform: uppercase;
     letter-spacing: 1px;
+    display: block;
+    margin-bottom: 6px;
   }
 
   .field-group input {
+    width: 100%;
     border: 1.5px solid #ddd;
     border-radius: 6px;
-    padding: 11px 14px;
+    padding: 12px 14px;
     font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
     color: #333;
-    background: #fafafa;
-    transition: border-color 0.2s;
+    font-family: 'Open Sans', sans-serif;
   }
 
-  .field-group input:focus {
-    outline: none;
-    border-color: #c9a84c;
-    background: #fff;
+  .field-group input:focus { outline: none; border-color: #c9a84c; }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+    margin: 8px 0 24px;
   }
 
-  /* ── SUBMIT ── */
   .submit-wrap {
     text-align: center;
-    margin-top: 36px;
+    margin-top: 32px;
   }
 
   .btn-submit {
@@ -322,58 +275,45 @@
     font-weight: 900;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    padding: 16px 48px;
+    padding: 18px 52px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 4px 20px rgba(201,168,76,0.4);
-    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 30px rgba(201,168,76,0.4);
+    transition: all 0.2s;
   }
 
-  .btn-submit:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(201,168,76,0.5);
-  }
+  .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(201,168,76,0.55); }
 
   .submit-note {
     font-size: 12px;
     color: #aaa;
-    margin-top: 10px;
+    margin-top: 12px;
   }
 
-  /* ── FOOTER ── */
   footer {
     background: #0a0a0a;
+    color: #555;
     text-align: center;
     padding: 24px;
     font-size: 12px;
-    color: #555;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
   }
 
   footer span { color: #c9a84c; }
 
-  /* ── DIVIDER ── */
-  .divider {
-    height: 1px;
-    background: linear-gradient(to right, transparent, #e0e0e0, transparent);
-    margin: 8px 0 0;
-  }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="badge">The People's Advocate</div>
   <h1>Let's Help You <span>Grow Faster</span> &amp; Stress Less</h1>
   <p class="sub">This quick assessment is designed to understand exactly where you are — and how we can remove the roadblocks standing between you and the growth you deserve.</p>
 </header>
 
-<!-- MAIN -->
 <div class="wrapper">
 
-  <!-- INTRO -->
   <div class="intro-card">
     <p>
       <strong>We get it.</strong> Running a business is one of the hardest things a person can do — and most people never see what it truly costs you: the late nights, the missed moments, the weight of doing everything yourself while still showing up for your clients every single day.<br><br>
@@ -381,14 +321,41 @@
     </p>
   </div>
 
-  <!-- SECTION 1: ABOUT YOUR BUSINESS -->
+  <!-- EMAIL CAPTURE -->
+  <div class="contact-section" style="padding:28px; margin-bottom:24px;">
+    <h3 style="font-family:'Montserrat',sans-serif; font-size:18px; font-weight:800; color:#0a0a0a; margin-bottom:6px;">
+      First, tell us who you are.
+    </h3>
+    <p style="font-size:14px; color:#888; margin-bottom:20px;">
+      So we know who to follow up with personally.
+    </p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px;">
+      <div>
+        <label style="font-size:12px; font-weight:700; color:#555; text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:6px;">First Name</label>
+        <input type="text" id="cap-name" placeholder="Your first name" style="width:100%; border:1.5px solid #ddd; border-radius:6px; padding:12px 14px; font-size:14px; color:#333; font-family:'Open Sans',sans-serif;"/>
+      </div>
+      <div>
+        <label style="font-size:12px; font-weight:700; color:#555; text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:6px;">Best Email</label>
+        <input type="email" id="cap-email" placeholder="your@email.com" style="width:100%; border:1.5px solid #ddd; border-radius:6px; padding:12px 14px; font-size:14px; color:#333; font-family:'Open Sans',sans-serif;"/>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+      <div>
+        <label style="font-size:12px; font-weight:700; color:#555; text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:6px;">Phone Number</label>
+        <input type="text" id="cap-phone" placeholder="(555) 000-0000" style="width:100%; border:1.5px solid #ddd; border-radius:6px; padding:12px 14px; font-size:14px; color:#333; font-family:'Open Sans',sans-serif;"/>
+      </div>
+      <div>
+        <label style="font-size:12px; font-weight:700; color:#555; text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:6px;">Business Type</label>
+        <input type="text" id="cap-biz" placeholder="e.g. Cleaning, Landscaping..." style="width:100%; border:1.5px solid #ddd; border-radius:6px; padding:12px 14px; font-size:14px; color:#333; font-family:'Open Sans',sans-serif;"/>
+      </div>
+    </div>
+  </div>
+
   <div class="section-label">
     <div class="icon">🏢</div>
     <h2>About Your Business</h2>
   </div>
   <div class="divider"></div>
-
-  <!-- Q1 -->
   <div class="q-card">
     <div class="q-number">Question 01</div>
     <div class="q-text">What type of business do you operate — and who do you serve?</div>
@@ -398,7 +365,6 @@
     </div>
   </div>
 
-  <!-- Q2 -->
   <div class="q-card">
     <div class="q-number">Question 02</div>
     <div class="q-text">How long have you been in business?</div>
@@ -413,46 +379,49 @@
     </div>
   </div>
 
-  <!-- SECTION 2: THE REAL PAIN -->
   <div class="section-label">
     <div class="icon">🔥</div>
     <h2>Where the Frustration Lives</h2>
   </div>
   <div class="divider"></div>
 
-  <!-- Q3 -->
   <div class="q-card">
     <div class="q-number">Question 03</div>
-    <div class="q-text">Right now, what is your #1 biggest challenge when it comes to growing your business?</div>
-    <div class="q-why">Be as honest as you want. The more real you are, the better we can help.</div>
-    <div class="q-answer">
-      <textarea placeholder="e.g. I can't seem to get consistent new clients. I get referrals sometimes but there's no system..."></textarea>
-    </div>
-  </div>
-
-  <!-- Q4 -->
-  <div class="q-card">
-    <div class="q-number">Question 04</div>
-    <div class="q-text">Which of these sounds most like your day-to-day reality? (Select all that apply)</div>
-    <div class="q-why">You're not alone in any of these. We hear them every day.</div>
+    <div class="q-text">What is the single biggest challenge your business is facing right now?</div>
+    <div class="q-why">Be honest. The more real you are here, the more we can actually help.</div>
     <div class="q-answer">
       <div class="options">
-        <div class="option-btn" onclick="toggleOption(this)">I'm doing everything myself</div>
-        <div class="option-btn" onclick="toggleOption(this)">I'm great at my craft but struggle to sell it</div>
-        <div class="option-btn" onclick="toggleOption(this)">I have no time to market</div>
-        <div class="option-btn" onclick="toggleOption(this)">I don't know what's actually working</div>
-        <div class="option-btn" onclick="toggleOption(this)">My income is unpredictable</div>
-        <div class="option-btn" onclick="toggleOption(this)">I can't seem to scale past a certain point</div>
-        <div class="option-btn" onclick="toggleOption(this)">I'm too busy working IN the business to work ON it</div>
+        <div class="option-btn" onclick="toggleOption(this)">Not enough leads or clients</div>
+        <div class="option-btn" onclick="toggleOption(this)">Inconsistent revenue</div>
+        <div class="option-btn" onclick="toggleOption(this)">Too much to do, not enough time</div>
+        <div class="option-btn" onclick="toggleOption(this)">No clear marketing strategy</div>
+        <div class="option-btn" onclick="toggleOption(this)">Pricing and profit issues</div>
+        <div class="option-btn" onclick="toggleOption(this)">Building and managing a team</div>
+        <div class="option-btn" onclick="toggleOption(this)">Standing out from competitors</div>
+        <div class="option-btn" onclick="toggleOption(this)">Something else</div>
       </div>
     </div>
   </div>
 
-  <!-- Q5 -->
+  <div class="q-card">
+    <div class="q-number">Question 04</div>
+    <div class="q-text">Describe a typical day running your business. What does it actually look like?</div>
+    <div class="q-why">We want to understand your reality — not the polished version.</div>
+    <div class="q-answer">
+      <textarea placeholder="Walk us through your day. What takes up most of your time? What do you wish you could hand off?"></textarea>
+    </div>
+  </div>
+
+  <div class="section-label">
+    <div class="icon">📊</div>
+    <h2>Your Growth Picture</h2>
+  </div>
+  <div class="divider"></div>
+
   <div class="q-card">
     <div class="q-number">Question 05</div>
-    <div class="q-text">How satisfied are you with your current ability to consistently attract new clients?</div>
-    <div class="q-why">1 = Completely stuck &nbsp;|&nbsp; 10 = Clients find me effortlessly</div>
+    <div class="q-text">On a scale of 1–10, how confident are you in your ability to attract new clients consistently?</div>
+    <div class="q-why">1 = I have no system at all. 10 = My pipeline is always full.</div>
     <div class="q-answer">
       <div class="scale-row">
         <div class="scale-btn" onclick="pickScale(this,'q5')">1</div>
@@ -466,62 +435,57 @@
         <div class="scale-btn" onclick="pickScale(this,'q5')">9</div>
         <div class="scale-btn" onclick="pickScale(this,'q5')">10</div>
       </div>
-      <div class="scale-labels"><span>Completely stuck</span><span>Clients find me effortlessly</span></div>
+      <div class="scale-labels"><span>Not at all confident</span><span>Extremely confident</span></div>
     </div>
   </div>
 
-  <!-- SECTION 3: GROWTH & GOALS -->
+  <div class="q-card">
+    <div class="q-number">Question 06</div>
+    <div class="q-text">If you could change ONE thing about your business starting tomorrow, what would it be?</div>
+    <div class="q-why">This tells us what matters most to you right now.</div>
+    <div class="q-answer">
+      <textarea placeholder="Be specific. What would change everything for you?"></textarea>
+    </div>
+  </div>
+
   <div class="section-label">
     <div class="icon">🎯</div>
-    <h2>Your Growth Vision</h2>
+    <h2>Your Vision</h2>
   </div>
   <div class="divider"></div>
 
-  <!-- Q6 -->
-  <div class="q-card">
-    <div class="q-number">Question 06</div>
-    <div class="q-text">If you could change ONE thing about how your business runs tomorrow, what would it be?</div>
-    <div class="q-why">This tells us your most urgent priority — and that's exactly where we start.</div>
-    <div class="q-answer">
-      <textarea placeholder="e.g. I would have a reliable stream of new leads coming in every week without me chasing them..."></textarea>
-    </div>
-  </div>
-
-  <!-- Q7 -->
   <div class="q-card">
     <div class="q-number">Question 07</div>
     <div class="q-text">Where do you want your business to be 12 months from now?</div>
-    <div class="q-why">Dream big here. We want to understand your vision, not just your situation.</div>
+    <div class="q-why">Dream big. We want to know what success looks like for you.</div>
     <div class="q-answer">
-      <textarea placeholder="e.g. I want to be booked out 3 months in advance, have two employees, and finally pay myself a real salary..."></textarea>
+      <textarea placeholder="Revenue goals, team size, lifestyle, impact — whatever success means to you..."></textarea>
     </div>
   </div>
 
-  <!-- SECTION 4: READINESS -->
-  <div class="section-label">
-    <div class="icon">⚡</div>
-    <h2>Readiness &amp; Fit</h2>
-  </div>
-  <div class="divider"></div>
-
-  <!-- Q8 -->
   <div class="q-card">
     <div class="q-number">Question 08</div>
-    <div class="q-text">Have you ever worked with a business consultant, coach, or growth partner before?</div>
+    <div class="q-text">Have you ever worked with a business coach, consultant, or growth partner before?</div>
     <div class="q-answer">
       <div class="options">
         <div class="option-btn" onclick="toggleSingle(this,'q8')">Yes — and it was helpful</div>
-        <div class="option-btn" onclick="toggleSingle(this,'q8')">Yes — but it wasn't a great fit</div>
-        <div class="option-btn" onclick="toggleSingle(this,'q8')">No — this would be new for me</div>
+        <div class="option-btn" onclick="toggleSingle(this,'q8')">Yes — but it didn't work out</div>
+        <div class="option-btn" onclick="toggleSingle(this,'q8')">No — but I'm open to it</div>
+        <div class="option-btn" onclick="toggleSingle(this,'q8')">No — and I'm not sure it's for me</div>
       </div>
     </div>
   </div>
 
-  <!-- Q9 -->
+  <div class="section-label">
+    <div class="icon">⚡</div>
+    <h2>Readiness Check</h2>
+  </div>
+  <div class="divider"></div>
+
   <div class="q-card">
     <div class="q-number">Question 09</div>
-    <div class="q-text">On a scale of 1–10, how ready are you to take action on the right solution today?</div>
-    <div class="q-why">1 = Just exploring &nbsp;|&nbsp; 10 = Ready to move right now</div>
+    <div class="q-text">On a scale of 1–10, how ready are you to take real action toward changing your business RIGHT NOW?</div>
+    <div class="q-why">1 = Just looking around. 10 = I'm ready to move today.</div>
     <div class="q-answer">
       <div class="scale-row">
         <div class="scale-btn" onclick="pickScale(this,'q9')">1</div>
@@ -535,11 +499,10 @@
         <div class="scale-btn" onclick="pickScale(this,'q9')">9</div>
         <div class="scale-btn" onclick="pickScale(this,'q9')">10</div>
       </div>
-      <div class="scale-labels"><span>Just exploring</span><span>Ready to move now</span></div>
+      <div class="scale-labels"><span>Just browsing</span><span>Ready to move now</span></div>
     </div>
   </div>
 
-  <!-- Q10 -->
   <div class="q-card">
     <div class="q-number">Question 10</div>
     <div class="q-text">Is there anything else you'd want us to know about your business or situation before we connect?</div>
@@ -549,22 +512,13 @@
     </div>
   </div>
 
-  <!-- CONTACT INFO -->
-  <!-- CLOSING SECTION -->
   <div class="contact-section" style="text-align:center; padding:36px 28px;">
-    <div style="font-size:36px; margin-bottom:16px;">&#x1F64F;&#x1F3FE;</div>
-    <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:800; color:#0a0a0a; margin-bottom:12px;">
-      You're Almost Done.
-    </h3>
-    <p style="font-size:15px; color:#666; line-height:1.75; max-width:480px; margin:0 auto 12px;">
-      Thank you for taking the time to be honest about where you are. That takes courage — and it's exactly the kind of clarity that leads to real growth.
-    </p>
-    <p style="font-size:14px; color:#999; line-height:1.7; max-width:460px; margin:0 auto;">
-      Hit the button below and we will personally review your answers and follow up with you within <strong style="color:#0a0a0a;">24–48 hours</strong> — ready to talk solutions, not theory.
-    </p>
+    <div style="font-size:36px; margin-bottom:16px;">🙏🏾</div>
+    <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:800; color:#0a0a0a; margin-bottom:12px;">You're Almost Done.</h3>
+    <p style="font-size:15px; color:#666; line-height:1.75; max-width:480px; margin:0 auto 12px;">Thank you for taking the time to be honest about where you are. That takes courage — and it's exactly the kind of clarity that leads to real growth.</p>
+    <p style="font-size:14px; color:#999; line-height:1.7; max-width:460px; margin:0 auto;">Hit the button below and we will personally review your answers and follow up with you within <strong style="color:#0a0a0a;">24–48 hours</strong> — ready to talk solutions, not theory.</p>
   </div>
 
-  <!-- SUBMIT -->
   <div class="submit-wrap">
     <button class="btn-submit" onclick="handleSubmit()">Submit My Assessment →</button>
     <p class="submit-note">Your answers are private. We will never sell or share your information. Ever.</p>
@@ -572,11 +526,9 @@
 
 </div>
 
-<!-- FOOTER -->
 <footer>
   <p>© 2026 <span>The People's Advocate</span> · <span>Awareness That Leads To Empowerment</span></p>
 </footer>
-
 <script>
   function toggleOption(el) {
     el.classList.toggle('selected');
@@ -597,11 +549,37 @@
   }
 
   function handleSubmit() {
-    const btn = document.querySelector('.btn-submit');
-    btn.textContent = '✓ Submitted — We\'ll Be In Touch!';
-    btn.style.background = 'linear-gradient(135deg, #2d8a4e, #3dab62)';
-    btn.style.color = '#fff';
+    var name  = document.getElementById('cap-name')  ? document.getElementById('cap-name').value.trim()  : '';
+    var email = document.getElementById('cap-email') ? document.getElementById('cap-email').value.trim() : '';
+    var phone = document.getElementById('cap-phone') ? document.getElementById('cap-phone').value.trim() : '';
+    var biz   = document.getElementById('cap-biz')   ? document.getElementById('cap-biz').value.trim()   : '';
+
+    if (!name || !email) {
+      alert('Please enter your name and email at the top before submitting.');
+      window.scrollTo({top: 0, behavior: 'smooth'});
+      return;
+    }
+
+    var btn = document.querySelector('.btn-submit');
+    btn.textContent = 'Submitting...';
     btn.disabled = true;
+
+    fetch('https://hooks.zapier.com/hooks/catch/27900870/43ri95p/', {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ name: name, email: email, phone: phone, business_type: biz, source: 'questionnaire', submitted_at: new Date().toISOString() })
+    })
+    .then(function() {
+      btn.textContent = '✓ Submitted — We\'ll Be In Touch!';
+      btn.style.background = 'linear-gradient(135deg, #2d8a4e, #3dab62)';
+      btn.style.color = '#fff';
+    })
+    .catch(function() {
+      btn.textContent = '✓ Submitted — We\'ll Be In Touch!';
+      btn.style.background = 'linear-gradient(135deg, #2d8a4e, #3dab62)';
+      btn.style.color = '#fff';
+    });
   }
 </script>
 
