@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The People's Advocate | Small Business Growth Questionnaire</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f4f4f4;
+    color: #1a1a1a;
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1c1c1c 60%, #2d2d2d 100%);
+    padding: 40px 32px 32px;
+    text-align: center;
+    border-bottom: 4px solid #c9a84c;
+  }
+
+  .badge {
+    display: inline-block;
+    background: #c9a84c;
+    color: #0a0a0a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+  }
+
+  header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(22px, 4vw, 36px);
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+  }
+
+  header h1 span { color: #c9a84c; }
+
+  header p.sub {
+    font-size: 15px;
+    color: #b0b0b0;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* ── MAIN WRAPPER ── */
+  .wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+
+  /* ── INTRO CARD ── */
+  .intro-card {
+    background: #ffffff;
+    border-left: 5px solid #c9a84c;
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  }
+
+  .intro-card p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #333;
+  }
+
+  .intro-card strong { color: #0a0a0a; }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    margin-top: 36px;
+  }
+
+  .section-label .icon {
+    width: 34px;
+    height: 34px;
+    background: #c9a84c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .section-label h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #0a0a0a;
+  }
+
+  /* ── QUESTION CARD ── */
+  .q-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 22px 26px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    border-top: 3px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .q-card:hover { border-top-color: #c9a84c; }
+
+  .q-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #c9a84c;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .q-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0a0a0a;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .q-why {
+    font-size: 13px;
+    color: #777;
+    font-style: italic;
+    line-height: 1.5;
+    padding-left: 12px;
+    border-left: 3px solid #f0e0b0;
+  }
+
+  /* answer area */
+  .q-answer {
+    margin-top: 14px;
+  }
+
+  .q-answer textarea,
+  .q-answer input[type="text"] {
+    width: 100%;
+    border: 1.5px solid #ddd;
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #333;
+    resize: vertical;
+    transition: border-color 0.2s;
+    background: #fafafa;
+  }
+
+  .q-answer textarea:focus,
+  .q-answer input[type="text"]:focus {
+    outline: none;
+    border-color: #c9a84c;
+    background: #fff;
+  }
+
+  .q-answer textarea { min-height: 80px; }
+
+  /* radio / checkbox options */
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .option-btn {
+    padding: 9px 18px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #fafafa;
+    user-select: none;
+  }
+
+  .option-btn:hover,
+  .option-btn.selected {
+    border-color: #c9a84c;
+    background: #fffbf0;
+    color: #0a0a0a;
+  }
+
+  .option-btn.selected { background: #c9a84c; color: #0a0a0a; border-color: #c9a84c; }
+
+  /* scale */
+  .scale-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+  }
+
+  .scale-btn {
+    width: 42px;
+    height: 42px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #888;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    background: #fafafa;
+    user-select: none;
+  }
+
+  .scale-btn:hover, .scale-btn.selected {
+    border-color: #c9a84c;
+    background: #c9a84c;
+    color: #0a0a0a;
+  }
+
+  .scale-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 4px;
+    padding: 0 2px;
+  }
+
+  /* ── CONTACT SECTION ── */
+  .contact-section {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 28px;
+    margin-top: 36px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+
+  .contact-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #0a0a0a;
+    margin-bottom: 20px;
+  }
+
+  .field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 520px) { .field-row { grid-template-columns: 1fr; } }
+
+  .field-group { display: flex; flex-direction: column; gap: 6px; }
+
+  .field-group label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .field-group input {
+    border: 1.5px solid #ddd;
+    border-radius: 6px;
+    padding: 11px 14px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background: #fafafa;
+    transition: border-color 0.2s;
+  }
+
+  .field-group input:focus {
+    outline: none;
+    border-color: #c9a84c;
+    background: #fff;
+  }
+
+  /* ── SUBMIT ── */
+  .submit-wrap {
+    text-align: center;
+    margin-top: 36px;
+  }
+
+  .btn-submit {
+    background: linear-gradient(135deg, #c9a84c, #e8c96a);
+    color: #0a0a0a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 16px 48px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(201,168,76,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(201,168,76,0.5);
+  }
+
+  .submit-note {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 10px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0a0a0a;
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+    color: #555;
+    letter-spacing: 0.5px;
+  }
+
+  footer span { color: #c9a84c; }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e0e0e0, transparent);
+    margin: 8px 0 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="badge">The People's Advocate</div>
+  <h1>Let's Help You <span>Grow Faster</span> &amp; Stress Less</h1>
+  <p class="sub">This quick assessment is designed to understand exactly where you are — and how we can remove the roadblocks standing between you and the growth you deserve.</p>
+</header>
+
+<!-- MAIN -->
+<div class="wrapper">
+
+  <!-- INTRO -->
+  <div class="intro-card">
+    <p>
+      <strong>We get it.</strong> Running a business is one of the hardest things a person can do — and most people never see what it truly costs you: the late nights, the missed moments, the weight of doing everything yourself while still showing up for your clients every single day.<br><br>
+      You didn't build something from the ground up just to stay stuck. <strong>You built it to grow.</strong> This short questionnaire helps us understand your world so we can meet you exactly where you are — and help you get to where you want to be.
+    </p>
+  </div>
+
+  <!-- SECTION 1: ABOUT YOUR BUSINESS -->
+  <div class="section-label">
+    <div class="icon">🏢</div>
+    <h2>About Your Business</h2>
+  </div>
+  <div class="divider"></div>
+
+  <!-- Q1 -->
+  <div class="q-card">
+    <div class="q-number">Question 01</div>
+    <div class="q-text">What type of business do you operate — and who do you serve?</div>
+    <div class="q-why">This helps us understand your world before we say a single word.</div>
+    <div class="q-answer">
+      <textarea placeholder="e.g. I run a cleaning company and I serve residential homeowners and small offices..."></textarea>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="q-card">
+    <div class="q-number">Question 02</div>
+    <div class="q-text">How long have you been in business?</div>
+    <div class="q-answer">
+      <div class="options">
+        <div class="option-btn" onclick="toggleOption(this)">Less than 1 year</div>
+        <div class="option-btn" onclick="toggleOption(this)">1–3 years</div>
+        <div class="option-btn" onclick="toggleOption(this)">3–5 years</div>
+        <div class="option-btn" onclick="toggleOption(this)">5–10 years</div>
+        <div class="option-btn" onclick="toggleOption(this)">10+ years</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: THE REAL PAIN -->
+  <div class="section-label">
+    <div class="icon">🔥</div>
+    <h2>Where the Frustration Lives</h2>
+  </div>
+  <div class="divider"></div>
+
+  <!-- Q3 -->
+  <div class="q-card">
+    <div class="q-number">Question 03</div>
+    <div class="q-text">Right now, what is your #1 biggest challenge when it comes to growing your business?</div>
+    <div class="q-why">Be as honest as you want. The more real you are, the better we can help.</div>
+    <div class="q-answer">
+      <textarea placeholder="e.g. I can't seem to get consistent new clients. I get referrals sometimes but there's no system..."></textarea>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="q-card">
+    <div class="q-number">Question 04</div>
+    <div class="q-text">Which of these sounds most like your day-to-day reality? (Select all that apply)</div>
+    <div class="q-why">You're not alone in any of these. We hear them every day.</div>
+    <div class="q-answer">
+      <div class="options">
+        <div class="option-btn" onclick="toggleOption(this)">I'm doing everything myself</div>
+        <div class="option-btn" onclick="toggleOption(this)">I'm great at my craft but struggle to sell it</div>
+        <div class="option-btn" onclick="toggleOption(this)">I have no time to market</div>
+        <div class="option-btn" onclick="toggleOption(this)">I don't know what's actually working</div>
+        <div class="option-btn" onclick="toggleOption(this)">My income is unpredictable</div>
+        <div class="option-btn" onclick="toggleOption(this)">I can't seem to scale past a certain point</div>
+        <div class="option-btn" onclick="toggleOption(this)">I'm too busy working IN the business to work ON it</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="q-card">
+    <div class="q-number">Question 05</div>
+    <div class="q-text">How satisfied are you with your current ability to consistently attract new clients?</div>
+    <div class="q-why">1 = Completely stuck &nbsp;|&nbsp; 10 = Clients find me effortlessly</div>
+    <div class="q-answer">
+      <div class="scale-row">
+        <div class="scale-btn" onclick="pickScale(this,'q5')">1</div>
+        <div class="scale-btn" onclick="pickScale(this,'q5')">2</div>
+        <div class="scale-btn" onclick="pickScale(this,'q5')">3</div>
+        <div class="scale-btn" onclick="pickScale(this,'q5')">4</div>
+        <div class="scale-btn" onclick="pickScale(this,'q5')">5</div>
+        <div class="scale-btn" onclick="pickScale(this,'q5')">6</div>
+        <div class="scale-btn" onclick="pickScale(this,'q5')">7</div>
+        <div class="scale-btn" onclick="pickScale(this,'q5')">8</div>
+        <div class="scale-btn" onclick="pickScale(this,'q5')">9</div>
+        <div class="scale-btn" onclick="pickScale(this,'q5')">10</div>
+      </div>
+      <div class="scale-labels"><span>Completely stuck</span><span>Clients find me effortlessly</span></div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: GROWTH & GOALS -->
+  <div class="section-label">
+    <div class="icon">🎯</div>
+    <h2>Your Growth Vision</h2>
+  </div>
+  <div class="divider"></div>
+
+  <!-- Q6 -->
+  <div class="q-card">
+    <div class="q-number">Question 06</div>
+    <div class="q-text">If you could change ONE thing about how your business runs tomorrow, what would it be?</div>
+    <div class="q-why">This tells us your most urgent priority — and that's exactly where we start.</div>
+    <div class="q-answer">
+      <textarea placeholder="e.g. I would have a reliable stream of new leads coming in every week without me chasing them..."></textarea>
+    </div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="q-card">
+    <div class="q-number">Question 07</div>
+    <div class="q-text">Where do you want your business to be 12 months from now?</div>
+    <div class="q-why">Dream big here. We want to understand your vision, not just your situation.</div>
+    <div class="q-answer">
+      <textarea placeholder="e.g. I want to be booked out 3 months in advance, have two employees, and finally pay myself a real salary..."></textarea>
+    </div>
+  </div>
+
+  <!-- SECTION 4: READINESS -->
+  <div class="section-label">
+    <div class="icon">⚡</div>
+    <h2>Readiness &amp; Fit</h2>
+  </div>
+  <div class="divider"></div>
+
+  <!-- Q8 -->
+  <div class="q-card">
+    <div class="q-number">Question 08</div>
+    <div class="q-text">Have you ever worked with a business consultant, coach, or growth partner before?</div>
+    <div class="q-answer">
+      <div class="options">
+        <div class="option-btn" onclick="toggleSingle(this,'q8')">Yes — and it was helpful</div>
+        <div class="option-btn" onclick="toggleSingle(this,'q8')">Yes — but it wasn't a great fit</div>
+        <div class="option-btn" onclick="toggleSingle(this,'q8')">No — this would be new for me</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="q-card">
+    <div class="q-number">Question 09</div>
+    <div class="q-text">On a scale of 1–10, how ready are you to take action on the right solution today?</div>
+    <div class="q-why">1 = Just exploring &nbsp;|&nbsp; 10 = Ready to move right now</div>
+    <div class="q-answer">
+      <div class="scale-row">
+        <div class="scale-btn" onclick="pickScale(this,'q9')">1</div>
+        <div class="scale-btn" onclick="pickScale(this,'q9')">2</div>
+        <div class="scale-btn" onclick="pickScale(this,'q9')">3</div>
+        <div class="scale-btn" onclick="pickScale(this,'q9')">4</div>
+        <div class="scale-btn" onclick="pickScale(this,'q9')">5</div>
+        <div class="scale-btn" onclick="pickScale(this,'q9')">6</div>
+        <div class="scale-btn" onclick="pickScale(this,'q9')">7</div>
+        <div class="scale-btn" onclick="pickScale(this,'q9')">8</div>
+        <div class="scale-btn" onclick="pickScale(this,'q9')">9</div>
+        <div class="scale-btn" onclick="pickScale(this,'q9')">10</div>
+      </div>
+      <div class="scale-labels"><span>Just exploring</span><span>Ready to move now</span></div>
+    </div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="q-card">
+    <div class="q-number">Question 10</div>
+    <div class="q-text">Is there anything else you'd want us to know about your business or situation before we connect?</div>
+    <div class="q-why">This is your open mic moment. We read every response personally.</div>
+    <div class="q-answer">
+      <textarea placeholder="Anything you want to share — challenges, goals, hesitations, or questions — we want to hear it..."></textarea>
+    </div>
+  </div>
+
+  <!-- CONTACT INFO -->
+  <!-- CLOSING SECTION -->
+  <div class="contact-section" style="text-align:center; padding:36px 28px;">
+    <div style="font-size:36px; margin-bottom:16px;">&#x1F64F;&#x1F3FE;</div>
+    <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:800; color:#0a0a0a; margin-bottom:12px;">
+      You're Almost Done.
+    </h3>
+    <p style="font-size:15px; color:#666; line-height:1.75; max-width:480px; margin:0 auto 12px;">
+      Thank you for taking the time to be honest about where you are. That takes courage — and it's exactly the kind of clarity that leads to real growth.
+    </p>
+    <p style="font-size:14px; color:#999; line-height:1.7; max-width:460px; margin:0 auto;">
+      Hit the button below and we will personally review your answers and follow up with you within <strong style="color:#0a0a0a;">24–48 hours</strong> — ready to talk solutions, not theory.
+    </p>
+  </div>
+
+  <!-- SUBMIT -->
+  <div class="submit-wrap">
+    <button class="btn-submit" onclick="handleSubmit()">Submit My Assessment →</button>
+    <p class="submit-note">Your answers are private. We will never sell or share your information. Ever.</p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <span>The People's Advocate</span> · <span>Awareness That Leads To Empowerment</span></p>
+</footer>
+
+<script>
+  function toggleOption(el) {
+    el.classList.toggle('selected');
+  }
+
+  function toggleSingle(el, group) {
+    const parent = el.closest('.q-card, .field-group, .contact-section');
+    if (parent) {
+      parent.querySelectorAll('.option-btn[onclick*="' + group + '"]').forEach(b => b.classList.remove('selected'));
+    }
+    el.classList.add('selected');
+  }
+
+  function pickScale(el, group) {
+    const row = el.closest('.scale-row');
+    if (row) row.querySelectorAll('.scale-btn').forEach(b => b.classList.remove('selected'));
+    el.classList.add('selected');
+  }
+
+  function handleSubmit() {
+    const btn = document.querySelector('.btn-submit');
+    btn.textContent = '✓ Submitted — We\'ll Be In Touch!';
+    btn.style.background = 'linear-gradient(135deg, #2d8a4e, #3dab62)';
+    btn.style.color = '#fff';
+    btn.disabled = true;
+  }
+</script>
+
+</body>
+</html>
